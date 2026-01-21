@@ -12,8 +12,17 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
+      // Handle standard e.key
       if (CHANNELS[e.key]) {
         setActiveChannel(e.key);
+        return;
+      }
+
+      // Fallback for older TV browsers using keyCode (49 is '1', 57 is '9')
+      // Subtract 48 to convert ASCII code to the number string
+      const numFromCode = String(e.keyCode - 48);
+      if (CHANNELS[numFromCode]) {
+        setActiveChannel(numFromCode);
       }
     };
 
