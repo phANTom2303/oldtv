@@ -44,26 +44,14 @@ function App() {
         key={videoId} 
         width="100%"
         height="100%"
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3`}
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1`}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        style={{ display: 'block' }}
+        style={{ display: 'block', pointerEvents: 'none' }}
       ></iframe>
       
-      {/* Old TV Scanline effect overlay */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03))',
-        backgroundSize: '100% 4px, 6px 100%',
-        pointerEvents: 'none',
-        zIndex: 5
-      }}></div>
     </div>
   )
 }
