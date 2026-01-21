@@ -46,7 +46,7 @@ function App() {
           pointerEvents: 'none',
           zIndex: 10
         }}>
-          CH: {activeChannel} (Press 1-9 to switch)
+          {activeChannel === '1' ? 'CH1 : TV9 | Press 2 for CNBC' : 'CH2 : CNBC | Press 1 for TV9'}
         </div>
 
       <iframe
