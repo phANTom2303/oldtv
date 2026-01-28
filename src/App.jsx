@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const CHANNELS = {
   '1': 'nSpwwcHVp80', // TV 9 bharatvarsh
-  '2': 'rZtoABptJ6w', // CNBC Awaaz
+  '2': 'i_1g_M0JSy4', // CNBC Awaaz Live Broadcast
   
 }
 
